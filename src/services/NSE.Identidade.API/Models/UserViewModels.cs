@@ -25,4 +25,25 @@ namespace NSE.Identidade.API.Models
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public required string Senha { get; set; }
     }   
+
+    public class UsuarioRespostaLogin
+    {
+        public string TokenAcesso { get; set; }
+        public double ExpiraEm { get; set; }
+        public UsuarioToken UsuarioToken { get; set; }
+    }
+
+    public class UsuarioToken
+    {
+        public string Id { get; set; }
+        public string Email { get; set; }
+        public IEnumerable<UsuarioClaim> Claims { get; set; }
+
+    }
+
+    public class UsuarioClaim
+    {
+        public string Value { get; set; }
+        public string Type { get; set; }
+    }
 }
