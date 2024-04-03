@@ -20,7 +20,7 @@
       "dotnetRunMessages": true,
       "applicationUrl": "https://127.0.0.1:7145;http://127.0.0.1:5022"
     },
-    "IIS Express": {
+    "IIS - Desenvolvimento": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
