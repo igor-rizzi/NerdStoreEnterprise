@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace NSE.WebApp.MVC.Pages
+namespace NSE.WebApp.MVC.Views.Home
 {
     public class IndexModel : PageModel
     {
