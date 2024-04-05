@@ -20,7 +20,7 @@ namespace NSE.WebApp.MVC.Controllers
 
             // API - Registro
 
-            if(false) return View(usuarioRegistro);
+            if (false) return View(usuarioRegistro);
 
             // Realizar login na aplicação
 
@@ -42,7 +42,7 @@ namespace NSE.WebApp.MVC.Controllers
 
             // API - Login
 
-            if(false) return View(usuarioLogin);
+            if (false) return View(usuarioLogin);
 
             // Realizar login na aplicação
 

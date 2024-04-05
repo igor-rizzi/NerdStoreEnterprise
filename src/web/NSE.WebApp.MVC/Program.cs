@@ -2,8 +2,8 @@ using NSE.WebApp.MVC.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddIdentityConfiguration();
 builder.Services.AddWebAppConfiguration();
+builder.Services.AddIdentityConfiguration();
 
 var app = builder.Build();
 
