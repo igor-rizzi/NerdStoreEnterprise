@@ -9,16 +9,16 @@
     <div class="col-md-12">
         <section>
             <form method="post">
-                <h4>Registre-se e comece a comprar hoje mesmo</h4>
+                <h4>Seja bem vindo e boas compras</h4>
                 <hr />
 
                 <div class="form-group">
-                    <label asp-for="Email" class="control-label"></label>
+                    <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Senha" class="control-label"></label>
+                    <label asp-for="Senha"></label>
                     <input asp-for="Senha" class="form-control" />
                     <span asp-validation-for="Senha" class="text-danger"></span>
                 </div>
@@ -27,10 +27,14 @@
                     <button type="submit" class="btn btn-primary">Entrar</button>
                 </div>
                 <div class="form-group">
-                    <a asp-controller="Identidade" asp-action="Registro" class="btn btn-success">Registrar-se</a>
+                    <a asp-controller="Identidade" asp-action="Registro">Criar uma conta</a>
                 </div>
 
             </form>
         </section>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
