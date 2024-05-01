@@ -15,13 +15,17 @@ namespace NSE.Identidade.API.Configuration
             return services;
         }
 
-        public static IApplicationBuilder UseApiCofiguration(this IApplicationBuilder app)
+        public static IApplicationBuilder UseApiCofiguration(this IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            if (env.IsDevelopment())
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-            });
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                });
+                app.UseDeveloperExceptionPage();
+            }
 
             app.UseHttpsRedirection();
 

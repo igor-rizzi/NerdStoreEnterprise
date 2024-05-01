@@ -23,7 +23,7 @@ namespace NSE.WebApp.MVC.Services.Autenticacao
                                     Encoding.UTF8,
                                     "application/json");
 
-            var response = await _httpClient.PostAsync("http://127.0.0.1:44370/api/identidade/autenticar", loginContent);
+            var response = await _httpClient.PostAsync("http://127.0.0.1:5022/api/identidade/autenticar", loginContent);
 
             return JsonSerializer.Deserialize<string>(await response.Content.ReadAsStringAsync());
         }
@@ -35,7 +35,7 @@ namespace NSE.WebApp.MVC.Services.Autenticacao
                                         Encoding.UTF8,
                                         "application/json");
 
-            var response = await _httpClient.PostAsync("http://127.0.0.1:44370/api/identidade/nova-conta", registroContent);
+            var response = await _httpClient.PostAsync("http://127.0.0.1:5022/api/identidade/nova-conta", registroContent);
 
             return JsonSerializer.Deserialize<string>(await response.Content.ReadAsStringAsync());
         }
