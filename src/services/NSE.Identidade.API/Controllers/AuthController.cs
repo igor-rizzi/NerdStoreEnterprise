@@ -103,8 +103,8 @@ namespace NSE.Identidade.API.Controllers
         {
             return new UsuarioRespostaLogin
             {
-                TokenAcesso = encodedToken,
-                ExpiraEm = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
+                AccessToken = encodedToken,
+                ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
                 UsuarioToken = new UsuarioToken
                 {
                     Id = user.Id,

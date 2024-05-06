@@ -28,8 +28,8 @@ namespace NSE.Identidade.API.Models
 
     public class UsuarioRespostaLogin
     {
-        public string TokenAcesso { get; set; }
-        public double ExpiraEm { get; set; }
+        public string AccessToken { get; set; }
+        public double ExpiresIn { get; set; }
         public UsuarioToken UsuarioToken { get; set; }
     }
 

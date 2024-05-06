@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddWebAppConfiguration();
 builder.Services.AddIdentityConfiguration();
 builder.Services.RegisterServices();
+builder.Services.AddApplicationInsightsTelemetry();
 
 var app = builder.Build();
 
